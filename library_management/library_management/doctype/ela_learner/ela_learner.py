@@ -1,0 +1,15 @@
+# Copyright (c) 2025, ITFC and contributors
+# For license information, please see license.txt
+
+# import frappe
+from frappe.model.document import Document
+
+
+class ELALearner(Document):
+	pass
+	def before_insert(self):
+	    self.display_label = f'{self.name1} ({self.ela_learner_id})' 
+	    
+	
+	def on_update(self):
+	    self.display_label = f'{self.name1} ({self.ela_learner_id})'
