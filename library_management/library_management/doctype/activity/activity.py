@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class ELAActivity(Document):
+class Activity(Document):
 	pass

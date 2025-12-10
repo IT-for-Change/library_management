@@ -1,7 +1,7 @@
 // Copyright (c) 2025, ITFC and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("ELA Activity", {
+// frappe.ui.form.on("Activity", {
 // 	refresh(frm) {
 
 // 	},

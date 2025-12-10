@@ -12,7 +12,7 @@ from frappe.utils.jinja import render_template
 from frappe.utils import slug
 
 
-class ELAAssessment(Document):
+class AssessmentForm(Document):
 
     def before_save(self):
 
@@ -24,37 +24,30 @@ class ELAAssessment(Document):
 
         questions = self.assessment_questions
         text = ''
-        for question in questions:
+        '''for question in questions:
             text += f'{question.response_type} | {question.mandatory} | {question.question_prompt_rich_text}'
+        '''
+        question_section_header = questions[0].response_type + ' Question'
+        question_prompt = questions[0].question_prompt_rich_text
+        activity_document = frappe.get_doc('Activity', self.activity)
 
-        activities = {}
-        if (self.activity == None):
-            activity_list = frappe.get_all(
-                'ELA Activity', fields=['name', 'title'])
-            for activity in activity_list:
-                activities[activity.name] = activity.title
-        else:
-            activity = frappe.get_all('ELA Activity',
-                                      filters={
-                                          'name': self.activity},
-                                      fields=['name', 'title']
-                                      )
-            activities[activity[0].name] = activity[0].title
-
-        template_path = "library_management/templates/odk_form.xml"
+        template_path = "library_management/templates/odk_form_v2.xml"
         context = {
-            "title": self.name,
+            "title": self.title,
+            "id": self.name,
             "cohort": self.cohort,
+            "question_section_header": question_section_header,
+            "question_prompt": question_prompt,
+            "activity_label": activity_document.title,
+            "activity_name": activity_document.name,
             "learners": str(learner_list),
-            "questions": str(text),
-            "activities": str(activities)
         }
 
         output = render_template(template_path, context)
 
         attachments = frappe.get_all('File', filters={
-            'attached_to_doctype': 'ELA Assessment',
-            'attached_to_name': self.name
+            'attached_to_name': self.name,
+            "attached_to_doctype": 'Assessment Form'
         })
 
         if (len(attachments) > 0):
@@ -66,7 +59,7 @@ class ELAAssessment(Document):
             "doctype": "File",
             # String that is your file's name
             "file_name": f'ELA-FORM-{file_name}.xml',
-            "attached_to_doctype": 'ELA Assessment',
+            "attached_to_doctype": 'Assessment Form',
             "attached_to_name": self.name,
             "is_private": True,
             "content": output,  # Your text/data content goes here.

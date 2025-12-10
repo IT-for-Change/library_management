@@ -35,7 +35,7 @@
    "fieldname": "cohort",
    "fieldtype": "Link",
    "label": "Cohort",
-   "options": "ELA Learner Cohort",
+   "options": "Learner Cohort",
    "reqd": 1
   },
   {
@@ -53,20 +53,21 @@
    "read_only": 1
   },
   {
-   "description": "Leave this blank to include all activities in the mobile assessment form. If you select an activity here, only the selected activity will be included in the mobile assessment form. ",
+   "description": "Select one or more activities. Selections will appear in the mobile assessment form. As far as possible, use not more than two or three activities per form.",
    "fieldname": "activity",
    "fieldtype": "Link",
    "label": "Activity",
-   "options": "ELA Activity"
+   "options": "Activity",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-08 19:14:39.626306",
+ "modified": "2025-12-10 09:55:10.000521",
  "modified_by": "Administrator",
  "module": "Library Management",
- "name": "ELA Assessment",
+ "name": "Assessment Form",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "format:{learner_id}",
+ "autoname": "format:ELA-L-{###}",
  "creation": "2025-12-06 13:34:27.411963",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -10,7 +10,7 @@
   "name1",
   "learner_id",
   "cohort",
-  "display_label"
+  "display_name"
  ],
  "fields": [
   {
@@ -22,7 +22,7 @@
    "fieldname": "cohort",
    "fieldtype": "Link",
    "label": "Cohort",
-   "options": "ELA Learner Cohort"
+   "options": "Learner Cohort"
   },
   {
    "fieldname": "learner_id",
@@ -30,7 +30,7 @@
    "label": "Learner ID"
   },
   {
-   "fieldname": "display_label",
+   "fieldname": "display_name",
    "fieldtype": "Data",
    "label": "Display Label",
    "read_only": 1
@@ -39,10 +39,10 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-08 19:14:39.951707",
+ "modified": "2025-12-10 07:00:30.555486",
  "modified_by": "Administrator",
  "module": "Library Management",
- "name": "ELA Learner",
+ "name": "Learner",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
@@ -77,5 +77,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "display_label"
+ "title_field": "display_name"
 }

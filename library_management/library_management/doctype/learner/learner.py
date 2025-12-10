@@ -5,11 +5,11 @@
 from frappe.model.document import Document
 
 
-class ELALearner(Document):
+class Learner(Document):
     pass
 
     def before_insert(self):
-        self.display_label = f'{self.name1} ({self.learner_id})'
+        self.display_name = f'{self.name1} ({self.learner_id})'
 
     def on_update(self):
-        self.display_label = f'{self.name1} ({self.learner_id})'
+        self.display_name = f'{self.name1} ({self.learner_id})'

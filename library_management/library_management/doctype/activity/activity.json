@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "format:A{##}",
+ "autoname": "format:ELA-A-{##}",
  "creation": "2025-12-08 14:16:31.893315",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -62,10 +62,10 @@
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-08 18:20:17.381586",
+ "modified": "2025-12-10 06:54:28.879228",
  "modified_by": "Administrator",
  "module": "Library Management",
- "name": "ELA Activity",
+ "name": "Activity",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

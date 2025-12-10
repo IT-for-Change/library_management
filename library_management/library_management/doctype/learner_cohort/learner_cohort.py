@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class ELALearnerCohort(Document):
+class LearnerCohort(Document):
 	pass

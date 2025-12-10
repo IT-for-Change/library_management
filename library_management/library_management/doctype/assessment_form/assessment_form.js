@@ -1,14 +1,14 @@
 // Copyright (c) 2025, ITFC and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("ELA Assessment", {
+// frappe.ui.form.on("Assessment Form", {
 // 	refresh(frm) {
 
 // 	},
 // });
 
 
-frappe.ui.form.on('ELA Assessment', {
+frappe.ui.form.on('Assessment Form', {
 
     refresh: function(frm) {
        frm.add_custom_button(__('Generate Form'), function() {

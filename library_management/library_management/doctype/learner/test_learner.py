@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestELAActivity(FrappeTestCase):
+class TestLearner(FrappeTestCase):
 	pass
