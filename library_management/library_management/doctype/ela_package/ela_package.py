@@ -38,7 +38,7 @@ class ELAPackage(Document):
 	        student_recording = asr.find('student_recording').text
 	        
 	        recording_to_attach = frappe.new_doc('File')
-	        recording_to_attach.
+	        #recording_to_attach.
 	        ela_submission = frappe.new_doc('ELA Submission')
 	        ela_submission.student = studentid
 	        ela_submission.activity = activityid
